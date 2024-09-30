@@ -11,6 +11,9 @@ function App() {
 
   function handleFormSubmit(event) {
     event.preventDefault()
+    if (entry.trim() === "") {
+      return;
+    }
     setTodos([...todos, {id:todos.length+1, entry:entry}])
     setEntry('')
   }
