@@ -30,7 +30,7 @@ function App() {
       <h1>Todo App</h1>
       <form className='addEntry' onSubmit={handleFormSubmit}>
         <input type='text' placeholder='please add a task' value={entry} onChange={handleEntryChange} />
-        <button type='submit'>Submit</button>
+        <button className='hover' type='submit'>Submit</button>
       </form>
 
       <div className='todoList'>
