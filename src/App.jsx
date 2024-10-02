@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import PercentageChange from './PercentageChange';
 
 function App() {
+  document.title = "Todo App"
   const [entry, setEntry] = useState("")
   const [todos, setTodos] = useState([])
 
@@ -43,6 +45,9 @@ function App() {
           )
 
         })}
+      </div>
+      <div>
+        <PercentageChange />
       </div>
     </>
 
