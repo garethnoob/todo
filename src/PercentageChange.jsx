@@ -13,9 +13,9 @@ function PercentageChange() {
         <div>
             <h1>Percentage Change</h1>
             <label htmlFor="forecast">Forecast</label>
-            <input type="number" value={forecast} onChange={(e) => setForecast(e.target.value)} id="forecast"/>
+            <input type="number" min={0} value={forecast} onChange={(e) => setForecast(e.target.value)} id="forecast"/>
             <label htmlFor="order">Order</label>
-            <input type="number" value={order} onChange={(e) => setOrder(e.target.value)} id="order"/>
+            <input type="number" min={0} value={order} onChange={(e) => setOrder(e.target.value)} id="order"/>
             <p>{result? result.toFixed(2):""}%</p>
         </div>
     )
