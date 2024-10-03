@@ -2,8 +2,8 @@ import { useState } from "react";
 
 
 function PercentageChange() {
-    const [forecast, setForecast] = useState("");
-    const [order, setOrder] = useState("");
+    const [forecast, setForecast] = useState(0);
+    const [order, setOrder] = useState(0);
 
 
 
