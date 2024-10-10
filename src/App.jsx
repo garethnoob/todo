@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import PercentageChange from './PercentageChange';
+import TodoList from './TodoList';
+import TodoForm from './TodoForm';
 
 function App() {
   document.title = "Todo App"
@@ -30,25 +32,9 @@ function App() {
   return (
     <>
       <h1>Todo App</h1>
-      <form className='addEntry' onSubmit={handleFormSubmit}>
-        <input type='text' placeholder='please add a task' value={entry} onChange={handleEntryChange} />
-        <button className='hover' type='submit'>Submit</button>
-      </form>
-
-      <div className='todoList'>
-        {todos.map(todo => {
-          return (
-              <li key={todo.id}>
-                {todo.entry}
-                <button onClick={()=>handleDeleteClick(todo.id)}>-</button>
-              </li>
-          )
-
-        })}
-      </div>
-      <div>
-        <PercentageChange />
-      </div>
+      <TodoForm entry={entry} handleEntryChange={handleEntryChange} handleFormSubmit={handleFormSubmit} />
+      <TodoList todos={todos} handleDeleteClick={handleDeleteClick} />
+      <PercentageChange />
     </>
 
 
